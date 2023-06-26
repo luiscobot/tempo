@@ -1,3 +1,19 @@
+@font-face {
+	font-family: 'Inter';
+	font-style:  normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("./font/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style:  normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("./font/Inter-Bold.woff2") format("woff2");
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -46,9 +62,92 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;;
+	justify-content: center;
+	align-items: center;
+	font-family: "Inter", sans-serif;
+	color: #f8fafc;
+	background-color: #0a2354;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%0a2354' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+header {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	margin: 100px;
+}
+
+.pre-title {
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	color: #f8fafc;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 3.6rem;
+	line-height: 1;
+	text-align: center;
+	margin-top: 10px;
+	color: #f97316;
+}
+
+.display {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: white;
-	background-color: black;
+	gap: 50px;
+}
+
+.minutes,
+.seconds {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.digits {
+	font-weight: 700;
+	font-size: 6rem;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-variant-numeric: tabular-nums;
+	color: #f8fafc;
+}
+
+.legend {
+	font-weight: 400;
+	font-size: .6rem;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #e2e8f0;
+}
+
+footer {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+}
+
+.company {
+	width: 150px;
+	margin: 50px;
+}
+
+.company img {
+	width: 100%;
 }
